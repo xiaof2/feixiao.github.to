@@ -4,7 +4,6 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # Here is Fei's website 
@@ -13,5 +12,18 @@ LOL, here is the Fei Xiao's website.
 Creating for my homework 4, Jeff says the website will be useful, 
 but haha we will see....
 
+# How Fei looks like? 
+
+It's me!! 
+![](image/little.jpg)
+
+
+
+and 20 years later
+
+![](image/big.jpg)
+
 # if you want to know more about me 
 [about me](about.html)
+
+# 
