@@ -59,8 +59,19 @@ instacart %>%
   
 ```
 
-
+# Chart C: Didstribution of order time in a day 
 ```{r}
+instacart %>%
+  drop_na() %>% 
+  mutate(day = order_dow + 1,order_day_of_week = lubridate::wday(day, label = TRUE)) %>%
+  select(order_id, user_id, order_day_of_week, order_hour_of_day, days_since_prior_order, product_name, aisle, department) %>%
+  group_by(order_day_of_week, order_hour_of_day) %>%
+  summarize(n_order = n_distinct(order_id)) %>%
+  plot_ly(x = ~order_hour_of_day, y = ~n_order, type = "scatter", mode = "lines",
+          color = ~order_day_of_week, alpha = 0.5) %>%
+  layout(xaxis = list(title = "Time in a day", range = list(0,24), dtick = 3, 
+                      tickvals = c(0, 3, 6, 9, 12, 15, 18, 21, 24)),
+         yaxis = list(title = "Number of Orders"))
 
 ```
 
