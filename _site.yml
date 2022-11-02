@@ -11,4 +11,5 @@ navbar:
       href: http://github.com/xiaof2/
 output:
   html_document:
-    theme: cerulean
+    theme: sandstone
+

@@ -1,11 +1,111 @@
 ---
-title: "About Fei"
+title: "About Fei - Academic"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# Know more about Fei 
+<style>
+    body {
+    background: url('image/bioart.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size:150%;
+    color:white;
+    }
+</style>
 
-- Foodie!!!
+
+
+## Education
+
+
+**Columbia University in the city of New York**[09/2021 – expected 05/2023]{style="float:right"}
+
+- MPH. in Biostatistics 
+
+- Certificate: Comparative Effectiveness Outcomes Resaerch 
+
+**University of California, Irvine** [09/2016 -06/2020]{style="float:right"}  
+
+- B.S. in Biology
+
+- Involvement: UCI Undergraduate Research Opportunity Program
+
+
+
+## Internship 
+
+
+**New York State Psychiatric Institute and Columbia University** [New York, US]{style="float:right"}
+
+*Research Assistant* [05/2022 – Present]{style="float:right"}
+
+- Investigate the effect of alcohol consumption and collaborate with NIAAA under supervision. 
+
+- Performed data analysis and visualization of results.
+
+
+**Research Foundation of Mental Hygiene, Inc**[New York, US]{style="float:right"}
+
+*Reserach Technician *[09/2022 - Present]{style="float:right"}
+
+
+- Learning tests methodology to test the hypothesis with team members. 
+
+
+
+**Qingdao Institute of Bioenergy and Bioprocess Technology**[Qingdao, China]{style="float:right"}
+
+*Intern Research Assistant *[Summer 2018]{style="float:right"}                      
+- Conducted gene analysis of special microalgae in order to investigate its energy production pathway
+
+- Participated in multi-lab rotation, built various lab skills and collaborated with multiple groups
+
+- Learned experiment design and assisted main researcher in conducting experiments
+
+## Research 
+
+**Meta-analysis with Individual Data to Identify Sex Differences in the Effect of Aerobic Exercise** [Columbia University]{style="float:right"}
+
+*Advisor: Seonjoo Lee* [5/2022 – Present]{style="float:right"}
+
+- Generate the Meta-analysis and forest plot to investigate the difference effect of aerobic exercise among male and female
+-	Assist in data harmonization, and manage the collected data from different study and survey
+- Conduct descriptive statistical analysis and plots by using R and SAS software.
+
+**Cluster Analysis of Alcohol consumption, Smoking and Mood Status during Pregnancy in the PASS** [Columbia University ]{style="float:right"}
+
+*Advisor: Seonjoo Lee* [6/2022 – Present]{style="float:right"}
+
+-	Build clusters model from the multiple variables data with kml packages.
+- Create descriptive tables and plots by using R and SAS software.
+
+
+**Leptin Receptor-B Marks a Functional Hair Follicle Stem Cell Mesenchymal Niche** [UCI Stem Cell Reserach Center]{style="float:right"}
+
+*Advisor: Maksim Plikus * [01/2019 – 06/2020]{style="float:right"}
+
+-	Used leptin Receptor-B as new marker for research in hair follicle stem cell
+- Conducted Lyme rase chain reaction experiment
+- Took charge of Mouse Breeding, Cryo and Parrafin section, and Hematoxylin and Eosin stain
+
+**Profiling Landscape and Dynamics of Skin Staphylococcus Aureus Infection at Single Cell Resolution** [UCI Stem Cell Reserach Center]{style="float:right"}
+
+*Advisor: Maksim Plikus * [Fall 2019]{style="float:right"}
+
+- Used Staphylococcus Aureus to infect mice; investigated infection and wound healing by single cell sequencing
+- Conducted polymerase chain reaction experiment
+
+## Publications
+
+**Liu Y, Guerrero-Juarez CF, Xiao F, Shettigar NU, Ramos R, Kuan CH, Lin YC, de Jesus Martinez Lomeli L, Park JM, Oh JW, Liu R, Lin SJ, Tartaglia M, Yang RB, Yu Z, Nie Q, Li J, Plikus MV. Hedgehog signaling reprograms hair follicle niche fibroblasts to a hyper-activated state. Dev Cell. 2022 Jul 25;57(14):1758-1775.e7. doi: 10.1016/j.devcel.2022.06.005.**
+
+
+
+
+
+

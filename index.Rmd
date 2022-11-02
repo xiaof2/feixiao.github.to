@@ -6,24 +6,37 @@ output:
     toc_float: true
 ---
 
+<style>
+    body {
+    background: url('image/bioart.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+</style>
+
 # Here is Fei's website 
 
-LOL, here is the Fei Xiao's website. 
-Creating for my homework 4, Jeff says the website will be useful, 
-but haha we will see....
+<p style="color:white;"> LOL, here is the Fei Xiao's website. I am creating this website for my homework 4, Jeff says the website will be useful, and we will see....</p>
 
 # How Fei looks like? 
 
-It's me!! 
-![](image/little.jpg)
+<p style="color:white;"> It's me!! </p>
+
+<img src="image/little.JPG" style = "width:25%"/>
+
+
+<p style="color:white;">and 20 years later </p>
+
+<img src="image/now.jpeg" style = "width:40%"/>
 
 
 
-and 20 years later
-
-![](image/big.jpg)
 
 # if you want to know more about me 
 [about me](about.html)
 
-# 
+
+
+
