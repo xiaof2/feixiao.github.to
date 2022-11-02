@@ -35,7 +35,7 @@ output:
 
 
 # if you want to know more about me 
-[about me](about.html)
+click here: [about me](about.html)
 
 
 
