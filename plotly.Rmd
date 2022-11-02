@@ -1,0 +1,105 @@
+---
+title: "Instacart Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    navbar:
+      - { icon: fa-home, href: index.html, align: right }
+      - { icon: fa-envelope, href: mailto:<xiaof2@uci.edu>, align: right }
+      - { icon: fa-github, href: "http://github.com/xiaof2/", align: right }
+    source: embed
+    theme: sandstone
+---
+
+#  using plotly create figure
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("instacart")
+
+data(nyc_airbnb)
+data(rest_inspec)
+```
+
+
+
+```{r}
+ny_noaa = 
+  ny_noaa %>% 
+  as_tibble(ny_noaa) %>% 
+    janitor::clean_names()%>% 
+    mutate(data = as.Date(date)) %>% 
+    mutate(year = as.integer(format(date, format = "%Y")),
+         month = as.integer(format(date, format = "%m")),
+         day = as.integer(format(date, format = "%d"))) %>% 
+    mutate(tmax = as.numeric(tmax)/10) %>% 
+    mutate(prcp = as.numeric(prcp)/10 ) %>% 
+    mutate(tmin = as.numeric(tmin)/10 ) %>% 
+   filter(month == 1| month == 7) %>% 
+   mutate(month = month.abb[month]) %>% 
+   filter(!is.na(tmax)) %>% 
+   mutate(tmax = as.numeric(tmax)) %>% 
+   group_by(month,year,id) %>% 
+   summarise(mean_month = mean(tmax)) %>% 
+   ggplot(aes(
+     x=year,
+     y=mean_month,
+     color=year))+
+   geom_point() +
+  facet_grid(.~month)+
+  labs(x = "Year",
+       y = "Average Max Temperature (C)",
+       caption = "Each point represents the average max temperature of a station at the given time")+
+  ggtitle('The mean max temperature in January and July in each station across years')+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(ny_noaa)
+```
+
+
+
+```{r}
+n_aisles= instacart %>%
+  group_by(aisle_id,aisle) %>% 
+  distinct() %>% 
+  summarize(n_order = n()) %>% 
+  arrange(desc(n_order)) %>% 
+  ungroup() %>% 
+  filter(n_order >10000) %>% 
+  ggplot(aes(x =n_order, y=aisle, fill = aisle))+
+  geom_bar(
+    stat = "identity"
+  )  +
+  labs(
+    title = 'Number of Items Ordered in Each Aisle',
+    caption = 'Aisles with more than 10000 items ordered',
+    x = ' Number of items',
+    y = ' Aisle'
+  ) + theme(legend.position = "topright") 
+ggplotly(n_aisles)
+instacart %>%
+  group_by(aisle_id,aisle) %>% 
+  distinct() %>% 
+  summarize(n_order = n()) %>% 
+  arrange(desc(n_order)) %>% 
+  ungroup() %>% 
+  filter(n_order >10000) %>% 
+  plot_ly(x = ~n_order,y = ~aisle, color = ~aisle,
+         type = "bar")
+```
+
+
+```{r}
+nyc_airbnb %>%
+  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>%
+  plot_ly(y = ~price, color = ~neighbourhood,
+         type = "box")
+```
+
+
+
