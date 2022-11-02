@@ -13,13 +13,16 @@ output:
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size:12pt
+    font-size:13pt;
+    color:white;
     }
 </style>
 
 # Here is Fei's website 
 
-<p style="color:white;"> LOL, here is the Fei Xiao's website. I am creating this website for my homework 4, Jeff says the website will be useful, and we will see....</p>
+<p style="color:white;">
+* LOL, here is the Fei Xiao's website. 
+* I am creating this website for my homework 4, Jeff says the website will be useful, and we will see....</p>
 
 # How Fei looks like? 
 
