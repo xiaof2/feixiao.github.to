@@ -2,7 +2,7 @@
 title: "Fei's website"
 output: 
   html_document:
-    toc: true
+    toc: false
     toc_float: true
 ---
 
@@ -13,6 +13,7 @@ output:
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-size:12pt
     }
 </style>
 
