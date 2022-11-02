@@ -20,7 +20,7 @@ library(p8105.datasets)
 library(plotly)
 ```
 
-```{r, echo=TRUE}
+```{r, echo=FALSE}
 data("instacart")
 instacart %>% 
   as_tibble(instacart)
@@ -28,7 +28,7 @@ instacart %>%
 
 # Chart A: Bar Graph shows the number of items ordered in each aisle, limiting this to aisles with more than 10000 items ordered.
 
-```{r}
+```{r, warning=FALSE,message=FALSE}
 instacart %>%
   group_by(aisle_id,aisle) %>% 
   distinct() %>% 
@@ -42,26 +42,26 @@ instacart %>%
          yaxis = list(title = "Aisle"))
 ```
 
-
+# Chart B: Scatter Plot shows Top 50 product in Fresh Fruits Aisle
 
 ```{r}
-instacart %>%
-  group_by(aisle_id,aisle) %>% 
-  distinct() %>% 
+instacart %>% 
+  filter(aisle == c("fresh fruits")) %>%              
+  group_by(aisle, product_name) %>% 
   summarize(n_order = n()) %>% 
   arrange(desc(n_order)) %>% 
-  ungroup() %>% 
-  filter(n_order >10000) %>% 
-  plot_ly(x = ~n_order,y = ~aisle, color = ~aisle,
-         type = "bar")
+  do(head(.,n =50)) %>% 
+  plot_ly(
+    x = ~ n_order, y = ~product_name, color= ~n_order, type = "scatter", alpha = 0.5
+  ) %>% 
+    layout(xaxis = list(title = "Number of Orders"),
+         yaxis = list(title = "Top 50 product in fresh fruits aisle"))
+  
 ```
 
 
 ```{r}
-nyc_airbnb %>%
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>%
-  plot_ly(y = ~price, color = ~neighbourhood,
-         type = "box")
+
 ```
 
 
