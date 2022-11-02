@@ -18,10 +18,10 @@ output:
     }
 </style>
 
-# Here is Fei's website 
+# Hello! Friends 
 
 <p style="color:white;">
-* LOL, here is the Fei Xiao's website. 
+* LOL, It's Fei Xiao
 * I am creating this website for my homework 4, Jeff says the website will be useful, and we will see....</p>
 
 # How Fei looks like? 
