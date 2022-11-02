@@ -9,26 +9,28 @@ output:
       - { icon: fa-envelope, href: mailto:<xiaof2@uci.edu>, align: right }
       - { icon: fa-github, href: "http://github.com/xiaof2/", align: right }
     source: embed
-    theme: sandstone
+    theme: lumen
 ---
 
-#  using plotly create figure
-
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+```{r setup, include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
 ```
 
-```{r, echo=FALSE}
+```{r, message=FALSE, include = FALSE}
 data("instacart")
-instacart %>% 
+instacart = instacart %>% 
   as_tibble(instacart)
 ```
 
-# Chart A: Bar Graph shows the number of items ordered in each aisle, limiting this to aisles with more than 10000 items ordered.
+Column {data-width=650}
+-----------------------------------------------------------------------
 
-```{r, warning=FALSE,message=FALSE}
+### Chart A: The number of items ordered in each aisle
+
+```{r}
 instacart %>%
   group_by(aisle_id,aisle) %>% 
   distinct() %>% 
@@ -42,7 +44,11 @@ instacart %>%
          yaxis = list(title = "Aisle"))
 ```
 
-# Chart B: Scatter Plot shows Top 50 product in Fresh Fruits Aisle
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B: Top 50 product in Fresh Fruits Aisle
 
 ```{r}
 instacart %>% 
@@ -56,10 +62,11 @@ instacart %>%
   ) %>% 
     layout(xaxis = list(title = "Number of Orders"),
          yaxis = list(title = "Top 50 product in fresh fruits aisle"))
-  
 ```
 
-# Chart C: Didstribution of order time in a day 
+
+### Chart C: Didstribution of order time in a day 
+
 ```{r}
 instacart %>%
   drop_na() %>% 
@@ -72,8 +79,6 @@ instacart %>%
   layout(xaxis = list(title = "Time in a day", range = list(0,24), dtick = 3, 
                       tickvals = c(0, 3, 6, 9, 12, 15, 18, 21, 24)),
          yaxis = list(title = "Number of Orders"))
-
 ```
-
 
 
