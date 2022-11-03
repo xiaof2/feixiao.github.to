@@ -10,6 +10,8 @@ output:
       - { icon: fa-github, href: "http://github.com/xiaof2/", align: right }
     source: embed
     theme: lumen
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
